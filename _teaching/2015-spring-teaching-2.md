@@ -1,20 +1,13 @@
 ---
-title: "Teaching experience 2"
+title: "AI Tutor"
 collection: teaching
 type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+permalink: /teaching/AI Tutor/
+external_url: https://preply.in/TAHA6EN2355085710?ts=17703101
+venue: "Preply"
+date: 2025-11-28
+location: "Islamabad, Pakistan"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Achieved 100% growth in earnings, lessons, and student acquisition over the last 90 days, with a 53% trial-to-subscription conversion rate and a perfect 5.0 student rating.
 
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
