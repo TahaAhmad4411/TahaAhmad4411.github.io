@@ -11,35 +11,40 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Computational Science and Engineering, NUST Islamabad, 2026
+* B.S. in Computer Science, FAST NUCES Islamabad, 2022
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* NUST
+  Machine Learning Research Engineer. Islamabad, Pakistan . 2025-Present  
+  * Owned the integration of the embedded controller systems with the Android application to generate the reommendations.
+  * Implemented an LLM-driven decision pipeline that analyzes sensor and soil data, retrieves agronomic actions via FAISS, and generates context-aware recommendations.
+  * Built multilingual support with automated English → Urdu and English → Spanish translation and voice synthesis, enabling farmer-friendly, accessible guidance.
+  * Improved crop advisory accuracy by 20% using a custom RAG pipeline with FAISS, Sentence Transformers, domain-tuned Agri-BERT, English-to-Urdu TTS.
+  * Integrated Flask REST APIs with Android and Firebase using POST requests for real-time data sync and inference delivery, achieving < 30 seconds end-to-end response time, with APIs, and storage/retrieval in Firestore.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Afiniti Software Solutions .
+  Software Engineer. Islamabad, Pakistan . 2022-2025
+  * Owned SQL-based analysis over 4.7M+ subscriber transactional datasets, identifying revenue leakage and operational failures
+  * Built reusable SQL queries and analytical workflows to validate KPIs used by business and engineering teams
+  * Delivered root-cause analyses that directly enabled $30K+ monthly revenue recovery
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Open AIMP .
+  AI Intern. Remote . 2021 
+  * Cut reporting delays from hours to minutes by implementing Spark-based data streaming.
+  * Enhanced analytics pipelines by executing Spark-based streaming data transfer.
   
-Skills
+Technical Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages
+  * Python, Bash, C++
+* Machine Learning
+  * Pytorch, HuggingFace, Langchain, Langraph
+* Automation
+  * N8n, AgentBuilder OpenAI
+* Systems
+  * CUDA, Docker, Kubernetees, Firebase, Cloudinary
 
 Publications
 ======
@@ -47,12 +52,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
