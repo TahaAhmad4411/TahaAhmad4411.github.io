@@ -147,45 +147,47 @@
       background: var(--border);
     }
 
-    /* PUBLICATIONS */
-    .pub-item {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
+    /* PUBLICATIONS CARDS */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
     }
-    .pub-item:last-child { border-bottom: none; }
+    .pub-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .pub-item:hover { border-color: var(--accent); }
     .pub-item h3 {
       font-size: 0.95rem;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--fg);
-      margin-bottom: 0.4rem;
       line-height: 1.4;
     }
-    .pub-item .authors {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
+    .pub-item .authors { font-size: 0.8rem; color: var(--muted); }
     .pub-item .venue {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
       color: var(--accent2);
-      margin-bottom: 0.5rem;
     }
-    .pub-item .links { display: flex; gap: 0.75rem; }
+    .pub-item .links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: auto; padding-top: 0.75rem; }
     .pub-item .links a {
       font-family: 'DM Mono', monospace;
       font-size: 0.68rem;
       color: var(--muted);
       text-decoration: none;
-      padding: 0.2rem 0.5rem;
+      padding: 0.2rem 0.6rem;
       border: 1px solid var(--border);
-      border-radius: 2px;
+      border-radius: 20px;
       transition: all 0.2s;
     }
-    .pub-item .links a:hover {
-      color: var(--fg);
-      border-color: var(--fg);
-    }
+    .pub-item .links a:hover { color: var(--fg); border-color: var(--accent); }
 
     /* EXPERIENCE */
     .exp-item {
@@ -231,27 +233,101 @@
       color: var(--accent);
     }
 
-    /* EDUCATION */
-    .edu-item {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
+    /* EDUCATION CARDS */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
     }
-    .edu-item:last-child { border-bottom: none; }
-    .edu-item h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
-    .edu-item .degree { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.25rem; }
+    .edu-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .edu-item:hover { border-color: var(--accent); }
+    .edu-item h3 { font-size: 0.98rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--fg); }
+    .edu-item .degree { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.4rem; }
     .edu-item .meta {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
       color: var(--muted);
+      margin-bottom: 0.6rem;
     }
-    .edu-item p { font-size: 0.85rem; color: #aaa; margin-top: 0.5rem; }
+    .edu-item p { font-size: 0.83rem; color: #aaa; margin-top: 0.3rem; line-height: 1.6; }
 
-    /* SKILLS */
+    /* PROJECT CARDS */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .proj-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-item:hover { border-color: var(--accent); }
+    .proj-item .proj-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.4rem;
+      gap: 0.5rem;
+    }
+    .proj-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--fg); }
+    .proj-item .proj-links { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .proj-item .proj-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .proj-item .proj-links a:hover { color: var(--fg); border-color: var(--accent); }
+    .proj-item .role { font-size: 0.82rem; color: var(--accent); margin-bottom: 0.5rem; }
+    .proj-item ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.25rem;
+      flex: 1;
+    }
+    .proj-item ul li {
+      font-size: 0.83rem;
+      color: #aaa;
+      padding: 0.2rem 0 0.2rem 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .proj-item ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* SKILLS CARDS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
+    .skill-group {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .skill-group:hover { border-color: var(--accent); }
     .skill-group h4 {
       font-family: 'DM Mono', monospace;
       font-size: 0.68rem;
@@ -329,10 +405,10 @@
 
 <nav>
   <div class="logo">taha ahmad</div>
-  <a href="#publications">Publications</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
+  <a href="#publications">Publications</a>
   <a href="#teaching">Teaching</a>
   <a href="#skills">Skills</a>
   <a href="#about">About</a>
@@ -352,7 +428,7 @@
       Building intelligent systems and helping others understand AI. Passionate about making machine learning accessible through education and practical applications.
     </p>
     <div class="hero-links">
-      <a href="mailto:tahmed4411@gmail.com">Email</a>
+      <a href="/cdn-cgi/l/email-protection#bbcfdad3d6dedf8f8f8a8afbdcd6dad2d795d8d4d6">Email</a>
       <a href="https://github.com/tahaahmad4411" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
       <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply</a>
@@ -412,74 +488,86 @@ monthly revenue recovery.</li>
   </section>
 
 
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <div class="pub-item">
-      <h3>Your Research Paper Title Here</h3>
-      <p class="authors"><strong>Taha Ahmad</strong>, Co-author Name, Co-author Name</p>
-      <p class="venue">Conference / Journal Name · Year</p>
-      <div class="links">
-        <a href="#">arXiv</a>
-        <a href="#">code</a>
-        <a href="#">demo</a>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <h3>Another Research Paper Title</h3>
-      <p class="authors">Co-author Name, <strong>Taha Ahmad</strong>, Co-author Name</p>
-      <p class="venue">Workshop Name · Conference · Year</p>
-      <div class="links">
-        <a href="#">paper</a>
-      </div>
-    </div>
-  </section>
 
   <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
+    <div class="proj-grid">
 
-    <div class="exp-item">
-      <div class="exp-header">
-        <h3>Project Name</h3>
-        <div class="links"><a href="#">code</a></div>
+      <div class="proj-item">
+        <div class="proj-header">
+          <h3>Project Name</h3>
+          <div class="proj-links"><a href="#">code</a></div>
+        </div>
+        <p class="role">Brief one-line description of what this project does.</p>
+        <ul>
+          <li>Technical detail or key achievement.</li>
+          <li>Technologies used or interesting implementation detail.</li>
+        </ul>
       </div>
-      <p class="role">Brief one-line description of what this project does.</p>
-      <ul>
-        <li>Technical detail or key achievement.</li>
-        <li>Technologies used or interesting implementation detail.</li>
-      </ul>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-header">
-        <h3>Another Project</h3>
-        <div class="links"><a href="#">code</a><a href="#">demo</a></div>
+      <div class="proj-item">
+        <div class="proj-header">
+          <h3>Another Project</h3>
+          <div class="proj-links"><a href="#">code</a><a href="#">demo</a></div>
+        </div>
+        <p class="role">Brief description.</p>
+        <ul>
+          <li>What you built and why it matters.</li>
+        </ul>
       </div>
-      <p class="role">Brief description.</p>
-      <ul>
-        <li>What you built and why it matters.</li>
-      </ul>
+
     </div>
   </section>
 
   <!-- EDUCATION -->
   <section id="education">
     <h2>Education</h2>
+    <div class="edu-grid">
 
-    <div class="edu-item">
-      <h3>NUST</h3>
-      <p class="degree">MS in Computational Science and Engineering</p>
-      <p class="meta">2026 · Islamabad</p>
-      <p>How Intracranial Pressure</p>
+      <div class="edu-item">
+        <h3>NUST</h3>
+        <p class="degree">MS in Computational Science and Engineering</p>
+        <p class="meta">2026 · Islamabad</p>
+        <p>GPA: 3.50/4.00 (3.67 in last Semester)</p>
+        <p>Subjects: AML, Deep Learning, NLP, LLM, Data Analysis and Statistics</p>
+        <p><strong>Thesis:</strong> "MRI-Driven Non-Invasive Intracranial Pressure Estimation Using Deep Learning and Physics-Based Simulation"</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>FAST NUCES</h3>
+        <p class="degree">BS Computer Science</p>
+        <p class="meta">2022 · Islamabad</p>
+        <p><strong>Selected Coursework with Grades:</strong> AI (A), Probability and Statistics (A-), Object Oriented Design (A-), Software Engineering (A-), Calculus (B+)</p>
+      </div>
+
     </div>
+  </section>
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pub-grid">
 
-    <div class="edu-item">
-      <h3>FAST NUCES</h3>
-      <p class="degree">BS Computer Science</p>
-      <p class="meta">2022 · Islamabad</p>
+      <div class="pub-item">
+        <h3>Your Research Paper Title Here</h3>
+        <p class="authors"><strong>Taha Ahmad</strong>, Co-author Name, Co-author Name</p>
+        <p class="venue">Conference / Journal Name · Year</p>
+        <div class="links">
+          <a href="#">arXiv</a>
+          <a href="#">code</a>
+          <a href="#">demo</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <h3>Another Research Paper Title</h3>
+        <p class="authors">Co-author Name, <strong>Taha Ahmad</strong>, Co-author Name</p>
+        <p class="venue">Workshop Name · Conference · Year</p>
+        <div class="links">
+          <a href="#">paper</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -514,6 +602,7 @@ monthly revenue recovery.</li>
     </div>
   </section>
 
+
   <!-- ABOUT -->
   <section id="about">
     <h2>About</h2>
@@ -526,15 +615,8 @@ monthly revenue recovery.</li>
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-links">
-      <a href="mailto:tahmed4411@gmail.com">tahmed4411@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#3e4a5f56535b5a0a0a0f0f7e59535f5752105d5153"><span class="__cf_email__" data-cfemail="1e6a7f76737b7a2a2a2f2f5e79737f7772307d7173">[email&#160;protected]</span></a>
       <a href="https://github.com/tahaahmad4411" target="_blank">GitHub — tahaahmad4411</a>
       <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
       <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply Tutoring Profile</a>
-    </div>
-    <p style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);margin-top:2rem;">Last updated February 2026.</p>
-  </section>
-
-</main>
-
-</body>
-</html>
+   
