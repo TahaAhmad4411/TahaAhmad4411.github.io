@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taha Ahmad — AI Tutor & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --bg2: #161616;
+      --fg: #e8e4dc;
+      --muted: #888;
+      --accent: #c8b89a;
+      --accent2: #7eb8a4;
+      --border: #2a2a2a;
+      --nav-w: 200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--nav-w);
+      height: 100vh;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border-right: 1px solid var(--border);
+      background: var(--bg);
+      z-index: 100;
+      overflow-y: auto;
+    }
+    nav .logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0;
+      transition: color 0.2s;
+      text-transform: uppercase;
+    }
+    nav a:hover { color: var(--fg); }
+    nav .theme-btn {
+      margin-top: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0;
+      text-align: left;
+    }
+    nav .theme-btn:hover { color: var(--fg); }
+
+    /* MAIN */
+    main {
+      margin-left: var(--nav-w);
+      padding: 4rem 4rem 6rem 5rem;
+      max-width: 900px;
+    }
+
+    /* HERO */
+    .hero {
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 4rem;
+    }
+    .hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 strong { font-weight: 700; color: var(--accent); }
+    .hero p { color: #bbb; max-width: 560px; margin-bottom: 1.5rem; }
+    .hero-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .hero-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent2);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .hero-links a:hover { border-color: var(--accent2); }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .stat {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .stat strong { color: var(--fg); font-size: 1rem; display: block; font-family: 'DM Sans', sans-serif; }
+
+    /* SECTION */
+    section {
+      margin-bottom: 4rem;
+    }
+    section h2 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    section h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* PUBLICATIONS */
+    .pub-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-item h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--fg);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+    .pub-item .authors {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .pub-item .venue {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+    .pub-item .links { display: flex; gap: 0.75rem; }
+    .pub-item .links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .pub-item .links a:hover {
+      color: var(--fg);
+      border-color: var(--fg);
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .exp-item h3 { font-size: 0.95rem; font-weight: 600; }
+    .exp-item .role {
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .exp-item .period {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .exp-item ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+    }
+    .exp-item ul li {
+      font-size: 0.85rem;
+      color: #aaa;
+      padding: 0.2rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .exp-item ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* EDUCATION */
+    .edu-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-item h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .edu-item .degree { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.25rem; }
+    .edu-item .meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .edu-item p { font-size: 0.85rem; color: #aaa; margin-top: 0.5rem; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-group h4 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .skill-group p { font-size: 0.82rem; color: #aaa; line-height: 1.6; }
+
+    /* TEACHING */
+    .teaching-item {
+      padding: 0.6rem 0;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .teaching-item:last-child { border-bottom: none; }
+    .teaching-item::before {
+      content: '›';
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ABOUT */
+    #about p { font-size: 0.9rem; color: #bbb; max-width: 620px; }
+
+    /* CONTACT */
+    .contact-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .contact-links a:hover { text-decoration: underline; }
+
+    /* LIGHT MODE */
+    body.light {
+      --bg: #faf8f5;
+      --bg2: #f0ece6;
+      --fg: #1a1a1a;
+      --muted: #777;
+      --accent: #8b6914;
+      --accent2: #2a7a68;
+      --border: #ddd;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem;
+        gap: 0.5rem;
+      }
+      nav .logo { margin-bottom: 0; width: 100%; }
+      nav .theme-btn { margin-top: 0; }
+      main {
+        margin-left: 0;
+        padding: 2rem 1.25rem 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">taha ahmad</div>
+  <a href="#publications">Publications</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#skills">Skills</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <button class="theme-btn" onclick="document.body.classList.toggle('light')">◑</button>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>
+      <strong>Taha Ahmad</strong><br>
+      AI Systems & Computational Biology
+    </h1>
+    <p>
+      Building intelligent systems and helping others understand AI. Passionate about making machine learning accessible through education and practical applications.
+    </p>
+    <div class="hero-links">
+      <a href="mailto:tahmed4411@gmail.com">Email</a>
+      <a href="https://github.com/tahaahmad4411" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
+      <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply</a>
+      <a href="https://drive.google.com/file/d/1bgLPfjol8Bg_1SZeyZ6vqUo6UNafFn6N/view?usp=sharing" target="_blank">CV (PDF)</a>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <strong>AI Tutor</strong>
+        on Preply
+      </div>
+      <div class="stat">
+        <strong>Open Source</strong>
+        contributor
+      </div>
+      <div class="stat">
+        <strong>ML Engineer</strong>
+        &amp; researcher
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Graduate Research Assistant</h3>
+        <span class="period">2025–Present</span>
+      </div>
+      <p class="role">NUST . Research · Hybrid</p>
+      <ul>
+        <li>Engineering a non-invasive Intracranial Pressure (ICP) estimation system using SwinUNETR and MHA in a 3D U-Net
+to enhanced tumor segmentation.</li>
+        <li>Improved advisory accuracy by 20% via a custom RAG pipeline using Agri-BERT, FAISS, and English-to-Urdu TTS.</li>
+        <li>Integrated Flask REST APIs with Android and Firebase using POST requests for real-time data sync and inference
+delivery, achieving less than 30 seconds end-to-end response time, with APIs, and storage/retrieval in Firestore.</li>
+        <li>Developing an AgriTech solution leveraging Crew AI for orchestrated task automation and Dockerized API
+deployment and Git, enabling external developers to integrate and scale crop advisory services seamlessly.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Software Engineer</h3>
+        <span class="period">2022–2025</span>
+      </div>
+      <p class="role">Afiniti · Islamabad . Hybrid</p>
+      <ul>
+        <li>Created a Python tool to automate analysis of call logs, call stats, sequence diagrams, and error detection.</li>
+        <li>Analyzed call data (4.7M+ subs) in Database using SQL, Python, and Excel to identify root causes, enabling $30K+
+monthly revenue recovery.</li>
+        <li>Performed unit, feature, UAT, and integration testing of Afiniti products in labs before AI-based model deployment.</li>
+    
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub-item">
+      <h3>Your Research Paper Title Here</h3>
+      <p class="authors"><strong>Taha Ahmad</strong>, Co-author Name, Co-author Name</p>
+      <p class="venue">Conference / Journal Name · Year</p>
+      <div class="links">
+        <a href="#">arXiv</a>
+        <a href="#">code</a>
+        <a href="#">demo</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <h3>Another Research Paper Title</h3>
+      <p class="authors">Co-author Name, <strong>Taha Ahmad</strong>, Co-author Name</p>
+      <p class="venue">Workshop Name · Conference · Year</p>
+      <div class="links">
+        <a href="#">paper</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Project Name</h3>
+        <div class="links"><a href="#">code</a></div>
+      </div>
+      <p class="role">Brief one-line description of what this project does.</p>
+      <ul>
+        <li>Technical detail or key achievement.</li>
+        <li>Technologies used or interesting implementation detail.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Another Project</h3>
+        <div class="links"><a href="#">code</a><a href="#">demo</a></div>
+      </div>
+      <p class="role">Brief description.</p>
+      <ul>
+        <li>What you built and why it matters.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="edu-item">
+      <h3>NUST</h3>
+      <p class="degree">MS in Computational Science and Engineering</p>
+      <p class="meta">2026 · Islamabad</p>
+      <p>How Intracranial Pressure</p>
+    </div>
+
+    <div class="edu-item">
+      <h3>FAST NUCES</h3>
+      <p class="degree">BS Computer Science</p>
+      <p class="meta">2022 · Islamabad</p>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="teaching-item">AI Tutor on Preply — Teaching machine learning, Python, and AI fundamentals to students globally. <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank" style="color:var(--accent2);margin-left:0.5rem;font-family:'DM Mono',monospace;font-size:0.7rem;">profile</a></div>
+    <div class="teaching-item">Add other teaching roles, TA positions, or tutoring experiences here.</div>
+    <div class="teaching-item">Workshop or course you've taught or helped develop.</div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Python, C++, Bash</p>
+      </div>
+      <div class="skill-group">
+        <h4>Machine Learning</h4>
+        <p>PyTorch, TensorFlow, Hugging Face, Scikit-learn, LangChain</p>
+      </div>
+      <div class="skill-group">
+        <h4>Tools & Platforms</h4>
+        <p>Docker, Git, AWS, Linux, Jupyter</p>
+      </div>
+      <div class="skill-group">
+        <h4>Other</h4>
+        <p>Data Science, NLP, Computer Vision, RAG systems</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      AI Systems Engineer and Researcher. 
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:tahmed4411@gmail.com">tahmed4411@gmail.com</a>
+      <a href="https://github.com/tahaahmad4411" target="_blank">GitHub — tahaahmad4411</a>
+      <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
+      <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply Tutoring Profile</a>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);margin-top:2rem;">Last updated February 2026.</p>
+  </section>
+
+</main>
+
+</body>
+</html>
