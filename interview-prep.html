@@ -450,12 +450,12 @@ function renderQs(){
       <div class="q-text">${q.q}</div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="window._toggleAns(${q.id})">✍ Answer</button>
-        <button class="btn btn-secondary" onclick="window._showSample(${q.id})">📖 Model Answer</button>
+        <button class="btn btn-secondary" onclick="window._showSample(${q.id})"> Model Answer</button>
       </div>
       <div class="answer-box" id="ab-${q.id}">
         <textarea id="ta-${q.id}" placeholder="Type your answer here…" rows="5"></textarea>
         <div class="btn-row" style="margin-top:.7rem;">
-          <button class="btn btn-primary" id="eval-${q.id}" onclick="window._evalQ(${q.id})">🤖 Score with Local AI</button>
+          <button class="btn btn-primary" id="eval-${q.id}" onclick="window._evalQ(${q.id})"> Score with Local AI</button>
         </div>
         <div class="ai-feedback" id="af-${q.id}">
           <div class="feedback-header">Local AI Semantic Similarity</div>
@@ -463,7 +463,7 @@ function renderQs(){
           <div id="kw-${q.id}"></div>
           <div class="score-row"><span class="score-label">Similarity</span><div class="score-track"><div class="score-fill" id="sf-${q.id}"></div></div><span class="score-num" id="sn-${q.id}">—</span></div>
         </div>
-        <div class="sample-panel" id="sp-${q.id}"><div class="sp-head">📖 Model Answer</div><div class="sp-body">${q.answer}</div></div>
+        <div class="sample-panel" id="sp-${q.id}"><div class="sp-head"> Model Answer</div><div class="sp-body">${q.answer}</div></div>
       </div>`;
     list.appendChild(card);
   });
