@@ -87,6 +87,28 @@
       padding-bottom: 4rem;
       border-bottom: 1px solid var(--border);
       margin-bottom: 4rem;
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .hero-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .hero-image {
+      flex-shrink: 0;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--bg2);
+      border: 2px solid var(--border);
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .hero h1 {
       font-family: 'DM Sans', sans-serif;
@@ -394,6 +416,18 @@
     }
 
     /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-image {
+        width: 240px;
+        height: 240px;
+      }
+      .hero p { margin-left: auto; margin-right: auto; }
+    }
     @media (max-width: 700px) {
       nav {
         position: static;
@@ -411,6 +445,15 @@
       main {
         margin-left: 0;
         padding: 2rem 1.25rem 4rem;
+      }
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-image {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -434,33 +477,38 @@
 
   <!-- HERO -->
   <div class="hero">
-    <h1>
-      <strong>Taha Ahmad</strong><br>
-      AI Systems & Computational Biology
-    </h1>
-    <p>
-      Building intelligent systems and helping others understand AI. Passionate about making machine learning accessible through education and practical applications.
-    </p>
-    <div class="hero-links">
-      <a href="/cdn-cgi/l/email-protection#bbcfdad3d6dedf8f8f8a8afbdcd6dad2d795d8d4d6">Email</a>
-      <a href="https://github.com/tahaahmad4411" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
-      <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply</a>
-      <a href="https://drive.google.com/file/d/1bgLPfjol8Bg_1SZeyZ6vqUo6UNafFn6N/view?usp=sharing" target="_blank">CV (PDF)</a>
+    <div class="hero-content">
+      <h1>
+        <strong>Taha Ahmad</strong><br>
+        AI Systems & Computational Biology
+      </h1>
+      <p>
+        Building intelligent systems and helping others understand AI. Passionate about making machine learning accessible through education and practical applications.
+      </p>
+      <div class="hero-links">
+        <a href="/cdn-cgi/l/email-protection#bbcfdad3d6dedf8f8f8a8afbdcd6dad2d795d8d4d6">Email</a>
+        <a href="https://github.com/tahaahmad4411" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
+        <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply</a>
+        <a href="https://drive.google.com/file/d/1bgLPfjol8Bg_1SZeyZ6vqUo6UNafFn6N/view?usp=sharing" target="_blank">CV (PDF)</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <strong>AI Tutor</strong>
+          on Preply
+        </div>
+        <div class="stat">
+          <strong>Open Source</strong>
+          contributor
+        </div>
+        <div class="stat">
+          <strong>ML Engineer</strong>
+           and researcher
+        </div>
+      </div>
     </div>
-    <div class="stats">
-      <div class="stat">
-        <strong>AI Tutor</strong>
-        on Preply
-      </div>
-      <div class="stat">
-        <strong>Open Source</strong>
-        contributor
-      </div>
-      <div class="stat">
-        <strong>ML Engineer</strong>
-        &amp; researcher
-      </div>
+    <div class="hero-image">
+      <img src="images/profile.png" alt="Taha Ahmad">
     </div>
   </div>
 
