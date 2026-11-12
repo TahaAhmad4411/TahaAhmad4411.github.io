@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Taha Ahmad"
+title                    : "Taha Ahmad Mirza"
 title_separator          : "-"
 name                     : &name "Taha Ahmad Mirza"
-description              : &description "Taha Ahmad portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Taha Ahmad Mirza: graduate researcher in Health AI, brain MRI analysis and physics-informed machine learning at NUST."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://tahaahmad4411.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,24 +24,24 @@ repository               : "TahaAhmad4411/TahaAhmad4411.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Taha Ahmad"
+  name             : "Taha Ahmad Mirza"
   pronouns         : "He/Him"  
-  bio              : "AI Systems & Computational Biology"
-  location         : "Islamabad"
-  employer         : "NUST Islamabad"
+  bio              : "MS Researcher, Computational Science & Engineering. Health AI · Brain MRI · Physics-Informed ML"
+  location         : "Islamabad, Pakistan"
+  employer         : "Computational Biomechanics Lab, NUST"
   uri              : # URL
   email            : "tahmed4411@gmail.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,7 +51,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/TahaAhmad4411"
+  github           : "TahaAhmad4411"
   kaggle           : "taha159357"  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/taha-ahmad-mirza-587559150/"
+  linkedin         : "tahmed4411"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

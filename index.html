@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taha Ahmad -  AI Systems Engineer and Computational Biology Researcher</title>
-  <meta name="description" content="Taha Ahmad — AI Systems & Computational Biology. Building intelligent systems and making machine learning accessible through education and practical applications. AI Tutor, ML Engineer, and open-source contributor." />
+  <title>Taha Ahmad Mirza | Health AI and Physics-Informed ML Researcher</title>
+  <meta name="description" content="Graduate researcher at NUST working on brain tumour MRI analysis, physics-informed neural networks and patient-specific biomechanics for non-invasive intracranial pressure estimation." />
 
   <!-- Open Graph (LinkedIn / Facebook) -->
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Taha Ahmad — AI Systems & Computational Biology" />
-  <meta property="og:description" content="Building intelligent systems and helping others understand AI. AI Tutor on Preply, ML Engineer & researcher, and open-source contributor." />
+  <meta property="og:title" content="Taha Ahmad Mirza | Health AI and Physics-Informed ML Researcher" />
+  <meta property="og:description" content="Graduate researcher at NUST working on brain tumour MRI analysis, physics-informed neural networks and patient-specific biomechanics for non-invasive intracranial pressure estimation." />
   <meta property="og:url" content="https://tahaahmad4411.github.io/" />
-  <meta property="og:site_name" content="Taha Ahmad" />
+  <meta property="og:site_name" content="Taha Ahmad Mirza" />
   <meta property="og:image" content="https://tahaahmad4411.github.io/images/og-banner.png" />
   <meta property="og:image:secure_url" content="https://tahaahmad4411.github.io/images/og-banner.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Taha Ahmad — AI Systems & Computational Biology" />
+  <meta property="og:image:alt" content="Taha Ahmad Mirza | Health AI and Physics-Informed ML Researcher" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Taha Ahmad — AI Systems & Computational Biology" />
-  <meta name="twitter:description" content="Building intelligent systems and helping others understand AI. AI Tutor, ML Engineer & researcher, open-source contributor." />
+  <meta name="twitter:title" content="Taha Ahmad Mirza | Health AI and Physics-Informed ML Researcher" />
+  <meta name="twitter:description" content="Graduate researcher at NUST working on brain tumour MRI analysis, physics-informed neural networks and patient-specific biomechanics for non-invasive intracranial pressure estimation." />
   <meta name="twitter:image" content="https://tahaahmad4411.github.io/images/og-banner.png" />
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +34,7 @@
       --bg: #0e0e0e;
       --bg2: #161616;
       --fg: #e8e4dc;
+      --fg2: #b5b1a9;
       --muted: #888;
       --accent: #c8b89a;
       --accent2: #7eb8a4;
@@ -140,7 +142,7 @@
       letter-spacing: -0.02em;
     }
     .hero h1 strong { font-weight: 700; color: var(--accent); }
-    .hero p { color: #bbb; max-width: 560px; margin-bottom: 1.5rem; }
+    .hero p { color: var(--fg2); max-width: 560px; margin-bottom: 1.5rem; }
     .hero-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
     .hero-links a {
       font-family: 'DM Mono', monospace;
@@ -278,7 +280,7 @@
     }
     .exp-item ul li {
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--fg2);
       padding: 0.2rem 0;
       padding-left: 1rem;
       position: relative;
@@ -312,7 +314,7 @@
       color: var(--muted);
       margin-bottom: 0.6rem;
     }
-    .edu-item p { font-size: 0.83rem; color: #aaa; margin-top: 0.3rem; line-height: 1.6; }
+    .edu-item p { font-size: 0.83rem; color: var(--fg2); margin-top: 0.3rem; line-height: 1.6; }
 
     /* PROJECT CARDS */
     .proj-grid {
@@ -359,7 +361,7 @@
     }
     .proj-item ul li {
       font-size: 0.83rem;
-      color: #aaa;
+      color: var(--fg2);
       padding: 0.2rem 0 0.2rem 1rem;
       position: relative;
       line-height: 1.5;
@@ -393,13 +395,13 @@
       color: var(--accent);
       margin-bottom: 0.6rem;
     }
-    .skill-group p { font-size: 0.82rem; color: #aaa; line-height: 1.6; }
+    .skill-group p { font-size: 0.82rem; color: var(--fg2); line-height: 1.6; }
 
     /* TEACHING */
     .teaching-item {
       padding: 0.6rem 0;
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--fg2);
       border-bottom: 1px solid var(--border);
       display: flex;
       gap: 1rem;
@@ -413,7 +415,7 @@
     }
 
     /* ABOUT */
-    #about p { font-size: 0.9rem; color: #bbb; max-width: 620px; }
+    #about p { font-size: 0.9rem; color: var(--fg2); max-width: 620px; }
 
     /* CONTACT */
     .contact-links { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -425,11 +427,26 @@
     }
     .contact-links a:hover { text-decoration: underline; }
 
+
+    /* RESEARCH + misc additions */
+    .lead { font-size: 0.95rem; color: var(--fg2); max-width: 720px; margin-bottom: 1.25rem; }
+    .pipeline { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0 0.75rem; }
+    .pipeline span {
+      font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--fg);
+      border: 1px solid var(--border); background: var(--bg2); padding: 0.35rem 0.6rem; border-radius: 4px;
+    }
+    .pipeline i { font-style: normal; color: var(--accent); }
+    .caption { font-size: 0.8rem; color: var(--muted); max-width: 720px; margin-top: 0.75rem; }
+    .sub-h2 { margin-top: 2.5rem; }
+    .exp-item .role a { color: var(--accent2); }
+    .teaching-item strong { color: var(--fg); }
+
     /* LIGHT MODE */
     body.light {
       --bg: #faf8f5;
       --bg2: #f0ece6;
       --fg: #1a1a1a;
+      --fg2: #444;
       --muted: #777;
       --accent: #8b6914;
       --accent2: #2a7a68;
@@ -482,16 +499,18 @@
 <body>
 
 <nav>
-  <div class="logo">taha ahmad</div>
+  <div class="logo">taha ahmad mirza</div>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
-  <a href="#publications">Publications</a>
   <a href="#teaching">Teaching</a>
+  <a href="#honors">Honors</a>
   <a href="#skills">Skills</a>
-  <a href="#about">About</a>
   <a href="#contact">Contact</a>
-  <button class="theme-btn" onclick="document.body.classList.toggle('light')">◑</button>
+  <a href="/files/Taha_Ahmad_Mirza_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+  <button class="theme-btn" onclick="document.body.classList.toggle('light')" aria-label="Toggle light and dark theme">◑</button>
 </nav>
 
 <main>
@@ -500,143 +519,202 @@
   <div class="hero">
     <div class="hero-content">
       <h1>
-        <strong>Taha Ahmad</strong><br>
-        AI Systems & Computational Biology
+        <strong>Taha Ahmad Mirza</strong><br>
+        Health AI · Brain MRI · Physics-Informed ML
       </h1>
       <p>
-        Building intelligent systems and helping others understand AI. Passionate about making machine learning accessible through education and practical applications.
+        I am a graduate researcher in Computational Science and Engineering at NUST (SINES), Islamabad, and a Research Scientist in the Computational Biomechanics Lab. My thesis uses physics-informed neural networks to estimate tumour-induced intracranial pressure from routine MRI, without invasive measurement.
       </p>
       <div class="hero-links">
-        <a href="/cdn-cgi/l/email-protection#bbcfdad3d6dedf8f8f8a8afbdcd6dad2d795d8d4d6">Email</a>
-        <a href="https://github.com/tahaahmad4411" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
-        <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply</a>
-        <a href="https://drive.google.com/file/d/1bgLPfjol8Bg_1SZeyZ6vqUo6UNafFn6N/view?usp=sharing" target="_blank">CV (PDF)</a>
+        <a href="mailto:tahmed4411@gmail.com">Email</a>
+        <a href="/files/Taha_Ahmad_Mirza_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="https://github.com/TahaAhmad4411" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tahmed4411" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank" rel="noopener">Preply</a>
       </div>
       <div class="stats">
         <div class="stat">
-          <strong>AI Tutor</strong>
-          on Preply
+          <strong>MS CSE, NUST</strong>
+          expected Jan 2027
         </div>
         <div class="stat">
-          <strong>Open Source</strong>
-          contributor
+          <strong>BraTS 2025</strong>
+          glioma segmentation
         </div>
         <div class="stat">
-          <strong>ML Engineer</strong>
-           and researcher
+          <strong>300+ hours</strong>
+          of AI teaching
         </div>
       </div>
     </div>
     <div class="hero-image">
-      <img src="images/profile.png" alt="Taha Ahmad">
+      <img src="images/profile.png" alt="Portrait of Taha Ahmad Mirza">
     </div>
   </div>
 
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <p class="lead">
+      Health AI, brain tumour MRI analysis and segmentation, multimodal learning for clinical prediction, physics-informed machine learning, patient-specific computational biomechanics (FEA/CFD), and rigorous evaluation of clinical ML models.
+    </p>
+    <div class="pipeline" aria-label="Thesis pipeline">
+      <span>MRI</span><i>→</i><span>Tumour &amp; ventricle segmentation</span><i>→</i><span>Patient-specific 3D mesh</span><i>→</i><span>FEA / CFD simulation</span><i>→</i><span>Neural-network surrogate</span>
+    </div>
+    <p class="caption">Thesis pipeline: <em>Patient-Specific Estimation of Tumour-Induced Intracranial Pressure from MRI using Physics-Informed Neural Networks</em>. Supervisor: Dr. Zartasha Mustansar.</p>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pub-grid">
+      <div class="pub-item">
+        <h3>Patient-Specific Finite Element and CSF Flow Simulation of Tumour-Induced Intracranial Pressure from MRI</h3>
+        <p class="authors"><strong>T. A. Mirza</strong>, Z. Mustansar, et al.</p>
+        <p class="venue">Manuscript in preparation · 2026</p>
+      </div>
+      <div class="pub-item">
+        <h3>Emergent Behavior in LLM Based Multi Agent Systems, A Review</h3>
+        <p class="authors">Usman Zia, <strong>Taha Ahmad</strong>, Muhammad Ismail, Faizan A. Bhatti</p>
+        <p class="venue">In preparation</p>
+      </div>
+      <div class="pub-item">
+        <h3>Feature Extraction for Breast Tumor Classification using Classical Machine Learning</h3>
+        <p class="authors"><strong>Taha Ahmad</strong>, Maryam Liaquat</p>
+        <p class="venue">In preparation · 2026</p>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
   <section id="experience">
-    <h2>Experience</h2>
+    <h2>Research Experience</h2>
+
     <div class="exp-item">
       <div class="exp-header">
-        <h3>AI Product Engineer</h3>
-        <span class="period">2025–Present</span>
+        <h3>Research Scientist</h3>
+        <span class="period">Jan 2026 – Present</span>
       </div>
-      <p class="role">Latin American Farms · Canada . Remote</p>
+      <p class="role">Computational Biomechanics Lab, NUST · Islamabad · PI: Dr. Zartasha Mustansar</p>
       <ul>
-        <li>Upscaling the Sensor-based Monitoring system of soil moisture and temperature</li>
-        <li>Created a Flutter app having backend in Python that does real-time data visualization</li>
-        
-    
+        <li><strong>End-to-end intracranial pressure (ICP) pipeline:</strong> MRI → tumour and ventricle segmentation → patient-specific 3D brain mesh → FEA/CFD simulation → neural-network surrogate. ICP is normally measured invasively; the aim is a non-invasive estimate from routine MRI.</li>
+        <li><strong>Physics-based synthetic training data:</strong> 9 tumour-growth × CSF-obstruction scenarios per patient (~15k mesh nodes), at ~40 s per case on a laptop, built as a batch pipeline for 30+ MRI scans.</li>
+        <li><strong>BraTS 2025 glioma segmentation challenge:</strong> trained a 3D multi-class model on multi-parametric MRI (T1n, T1c, T2w, T2-FLAIR).</li>
       </ul>
     </div>
 
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Research Assistant</h3>
+        <span class="period">Jan 2025 – Dec 2025</span>
+      </div>
+      <p class="role">AgriTech Project, SINES, NUST · Islamabad · PI: Dr. Absaar ul Jabbar</p>
+      <ul>
+        <li>Built an <strong>Urdu-first crop advisory system</strong> for cotton farmers (Flask + GPT-4.1 RAG backend, Android app, Urdu text-to-speech). It turns live soil-sensor readings and weather forecasts into field-specific fertilizer and irrigation advice. Patent filing in progress.</li>
+        <li><strong>189-query, 4-arm ablation:</strong> stage-specific rule thresholds reached 87.8% fully correct advice, against 74.6% for full RAG and 5.3% for the LLM alone. I traced the −13.2 pp drop to retrieval overriding the thresholds (exact McNemar test, <em>p</em> = 8 × 10<sup>−4</sup>).</li>
+        <li>Designed rule-based soil classification (growth-stage NPK limits, USDA salinity classes for EC) and 5-day forecast rules for rain and heat stress, served through Flask REST APIs with Firestore sync at &lt; 90 s end-to-end response.</li>
+      </ul>
+    </div>
 
+    <h2 class="sub-h2">Industry Experience</h2>
 
     <div class="exp-item">
       <div class="exp-header">
-        <h3>Graduate Research Assistant</h3>
-        <span class="period">2025–Present</span>
+        <h3>AI Product Engineer</h3>
+        <span class="period">2025 – Present</span>
       </div>
-      <p class="role">NUST . Research · Hybrid</p>
+      <p class="role">Latin American Farms · Canada · Remote</p>
       <ul>
-
-        <li>
-          <strong>Medical Imaging and ICP Estimation:</strong> Engineering a non-invasive Intracranial Pressure (ICP) estimation pipeline using SwinUNETR and Multi-Head Attention integrated into a 3D U-Net architecture for enhanced brain tumor segmentation from MRI scans, enabling physics-driven simulation workflows for patient-specific ICP prediction.
-        </li>
-
-        <li>
-          <strong>AgriTech AI Advisory System:</strong> Developed an end-to-end AI-powered crop advisory platform using a custom Retrieval-Augmented Generation (RAG) pipeline built with Agri-BERT, FAISS vector search, and English-to-Urdu Text-to-Speech, improving advisory accuracy by 20% and accessibility for local farmers.
-        </li>
-
-        <li>
-          <strong>AgriTech Mobile and Backend Integration:</strong> Designed and integrated Flask REST APIs with Android and Firebase Firestore using POST-based inference pipelines, enabling real-time advisory delivery and synchronization with less than 30 seconds end-to-end response time.
-        </li>
-
-        <li>
-          <strong>AgriTech Autonomous AI Infrastructure:</strong> Developing a scalable agricultural intelligence system using CrewAI for orchestrated task automation, Dockerized API deployment, and Git-based version control, enabling modular integration and seamless scalability for external developers and agricultural platforms.
-        </li>
-      </ul>    
+        <li>Scaling up a sensor-based monitoring system for soil moisture and temperature.</li>
+        <li>Built a Flutter app with a Python backend for real-time data visualization.</li>
+      </ul>
     </div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <h3>Software Engineer</h3>
-        <span class="period">2022–2025</span>
+        <h3>Software Engineer I</h3>
+        <span class="period">Nov 2022 – Jan 2025</span>
       </div>
-      <p class="role">Afiniti · Islamabad . Hybrid</p>
+      <p class="role">Afiniti · Islamabad</p>
       <ul>
-        <li>Created a Python tool to automate analysis of call logs, call stats, sequence diagrams, and error detection.</li>
-        <li>Analyzed call data (4.7M+ subs) in Database using SQL, Python, and Excel to identify root causes, enabling $30K+
-monthly revenue recovery.</li>
-        <li>Performed unit, feature, UAT, and integration testing of Afiniti products in labs before AI-based model deployment.</li>
-    
+        <li>Analyzed call data (4.7M+ subscribers) using SQL, Python, and Excel to identify root causes, enabling $30K+ monthly revenue recovery.</li>
+        <li>Built a Python tool to automate analysis of call logs, call statistics, sequence diagrams, and error detection.</li>
+        <li>Performed unit, feature, UAT, and integration testing of Afiniti products before AI-based model deployment.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Intern</h3>
+        <span class="period">Sept 2021 – Dec 2021</span>
+      </div>
+      <p class="role">Open AIMP · Remote</p>
+      <ul>
+        <li>Implemented Spark-based data streaming for analytics pipelines, cutting reporting delays from hours to minutes.</li>
       </ul>
     </div>
   </section>
 
-
-
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Selected Projects</h2>
     <div class="proj-grid">
 
       <div class="proj-item">
         <div class="proj-header">
-          <h3>Data Collection and Pretraining of GPT-2 from Scratch</h3>
-          <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Dataset-Collection-and-Pretraining-of-GPT-2-LM-from-Scratch/tree/main">code</a></div>
+          <h3>Multimodal Alzheimer's Progression Prediction</h3>
+          <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier" target="_blank" rel="noopener">code</a><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier/blob/main/MRI_brain_scan.gif" target="_blank" rel="noopener">demo</a></div>
         </div>
-        <p class="role">Collection of data from .gov and .edu websites, preprocessing, tokenization, and training of GPT-2 to get the response.</p>
+        <p class="role">Video Vision Transformers · TensorFlow</p>
         <ul>
-          <li>Model Parameters: 171 million, 3.1 million tokens</li>
-          <li>Wandb, Colab, Common Crawl, ClueWeb22</li>
+          <li>Multimodal pipeline over 487 longitudinal 3D T1 MRI scans (227 subjects) from ADNI. Each scan is linked to the nearest clinical visit (median gap 5 days), plus demographic and APOE/TOMM40 genetic data.</li>
+          <li>Audited an earlier pipeline that reported 81% accuracy and found subject-level data leakage (487 scans inflated to 1,212 samples), test-set reuse for early stopping and label circularity. Rebuilt it with subject-level splits, baselines and bootstrap confidence intervals.</li>
         </ul>
       </div>
 
       <div class="proj-item">
         <div class="proj-header">
-          <h3>Alzheimer's Diseaase Progression Timeline</h3>
-          <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier">code</a><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier/blob/main/MRI_brain_scan.gif">demo</a></div>
+          <h3>Data Collection and Training GPT-2</h3>
+          <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Dataset-Collection-and-Pretraining-of-GPT-2-LM-from-Scratch" target="_blank" rel="noopener">code</a></div>
         </div>
-        <p class="role">Predicting the timeline of an AD using Video Vision Transformers via Brain MRI Scans.</p>
+        <p class="role">GPT-2 · BeautifulSoup</p>
         <ul>
-          <li>Input as 3D MRI volumes with temporal information, processed using a custom Video Vision Transformer architecture.</li>
+          <li>Reduced training loss by 35% by pretraining GPT-2 on 500K+ custom dataset lines from .gov.pk sources.</li>
+          <li>Built and fine-tuned a tokenizer from scratch to process 3M+ tokens for NLP tasks.</li>
         </ul>
       </div>
 
+      <div class="proj-item">
+        <div class="proj-header">
+          <h3>Stable Diffusion Web App</h3>
+          <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Generate-Image-using-Diffusion-Models" target="_blank" rel="noopener">code</a></div>
+        </div>
+        <p class="role">TensorFlow · Streamlit</p>
+        <ul>
+          <li>Built a Streamlit text-to-image app and evaluated generated image quality and prompt alignment with Hugging Face models and automated metrics.</li>
+        </ul>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-header">
+          <h3>HateSpeechInspector</h3>
+          <div class="proj-links"><a href="https://github.com/HSInspector/HateSpeechInspector/tree/main" target="_blank" rel="noopener">code</a></div>
+        </div>
+        <p class="role">Python · XLNet · React · Twint · PyTorch</p>
+        <ul>
+          <li>Trained an XLNet classifier on a 101K augmented dataset and built a web app that fetches Twitter (X) data in real time and predicts hate categories.</li>
+        </ul>
+      </div>
 
       <div class="proj-item">
         <div class="proj-header">
           <h3>Breast Tumor Classification Using Data Analysis</h3>
-          <!-- <div class="proj-links"><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier">code</a><a href="https://github.com/TahaAhmad4411/Alzheimer-s-Disease-Classifier/blob/main/MRI_brain_scan.gif">demo</a></div> -->
         </div>
-        <p class="role">Improved 98% accuracy using data analysis techniques and feature engineering by reducing from 32 features to only 3 in classifying breast tumors using classical machine learning</p>
+        <p class="role">Feature selection · Hypothesis testing · Random Forest</p>
         <ul>
-          <li>Applied Concepts: Feature Selection, Hypothesis Testing, Random Forest</li>
+          <li>Reached 98% accuracy with classical machine learning after cutting the feature set from 32 features to 3 through data analysis and feature engineering.</li>
         </ul>
       </div>
-
-
 
     </div>
   </section>
@@ -645,70 +723,56 @@ monthly revenue recovery.</li>
   <section id="education">
     <h2>Education</h2>
     <div class="edu-grid">
-
       <div class="edu-item">
-        <h3>NUST</h3>
+        <h3>National University of Sciences and Technology (NUST), SINES</h3>
         <p class="degree">MS in Computational Science and Engineering</p>
-        <p class="meta">2026 · Islamabad</p>
-        <p>GPA: 3.50/4.00 (3.67 in last Semester)</p>
-        <p>Subjects: AML, Deep Learning, NLP, LLM, Data Analysis and Statistics</p>
-        <p><strong>Thesis:</strong> "MRI-Driven Non-Invasive Intracranial Pressure Estimation Using Deep Learning and Physics-Based Simulation"</p>
+        <p class="meta">Jan 2025 – Jan 2027 (expected) · Islamabad</p>
+        <p><strong>Thesis:</strong> Patient-Specific Estimation of Tumour-Induced Intracranial Pressure from MRI using Physics-Informed Neural Networks</p>
+        <p><strong>Supervisor:</strong> Dr. Zartasha Mustansar</p>
+        <p><strong>GPA:</strong> 3.50/4.00 (3.67 in last semester)</p>
+        <p><strong>Coursework:</strong> Machine Learning, Deep Learning, Large Language Models, Health AI, Data Analysis and Statistics</p>
       </div>
-
       <div class="edu-item">
-        <h3>FAST NUCES</h3>
-        <p class="degree">BS Computer Science</p>
-        <p class="meta">2022 · Islamabad</p>
-        <p><strong>Selected Coursework with Grades:</strong> AI (A), Probability and Statistics (A-), Object Oriented Design (A-), Software Engineering (A-), Calculus (B+)</p>
+        <h3>FAST National University of Computer and Emerging Sciences (NUCES)</h3>
+        <p class="degree">BS in Computer Science</p>
+        <p class="meta">Graduated June 2022 · Islamabad</p>
+        <p><strong>Coursework:</strong> Data Structures and Algorithms, Artificial Intelligence, Calculus, Probability and Statistics</p>
       </div>
-
-    </div>
-  </section>
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="pub-grid">
-
-      <div class="pub-item">
-        <h3>Physics-Informed Deep Learning for FE-Based Intracranial Pressure Estimation post Brain Tumor Segmentation</h3>
-        <p class="authors"><strong>Taha Ahmad</strong>, Zartasha Mustansar</p>
-        <p class="venue">Conference / Journal Name (TBD)· 2026</p>
-        <div class="links">
-          <a href="#">arXiv</a>
-          <a href="#">code</a>
-          <a href="#">demo</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <h3>Emergent Behavior in LLM Based Multi Agent Systems, A Review</h3>
-        <p class="authors">Usman Zia, <strong>Taha Ahmad</strong>, Muhammad Ismail, Faizan A. Bhatti</p>
-        <!-- <p class="venue">Workshop Name · Conference · Year</p> -->
-        <div class="links">
-          <a href="#">paper</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <h3>Feature Extraction for Breast Tumor Classification using Classical Machine Learning</h3>
-        <p class="authors"><strong>Taha Ahmad</strong>, Maryam Liaquat</p>
-        <p class="venue">Conference / Journal Name (TBD) · 2026</p>
-        <div class="links">
-          <a href="#">arXiv</a>
-          <a href="#">code</a>
-          <a href="#">demo</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- TEACHING -->
   <section id="teaching">
     <h2>Teaching</h2>
-    <div class="teaching-item">AI Tutor on Preply — Teaching machine learning, Python, and AI fundamentals to students globally. <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank" style="color:var(--accent2);margin-left:0.5rem;font-family:'DM Mono',monospace;font-size:0.7rem;">profile</a></div>
-    <div class="teaching-item">Add other teaching roles, TA positions, or tutoring experiences here.</div>
-    <div class="teaching-item">Workshop or course you've taught or helped develop.</div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>Graduate TA</h3>
+        <span class="period">Jul 2026 – Aug 2026</span>
+      </div>
+      <p class="role">Computational Biomechanics Lab, NUST · Islamabad</p>
+      <ul>
+        <li>Facilitated a 6-week internship program on applying AI in motion capture and rapid prototyping.</li>
+        <li>Facilitated an intensive 9-day StemX event introducing AI to O and A level students.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <h3>AI Tutor</h3>
+        <span class="period">Nov 2025 – Present</span>
+      </div>
+      <p class="role">Preply · Remote · <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank" rel="noopener">profile</a></p>
+      <ul>
+        <li>Delivered 300+ hours of live instruction across 300+ individual lessons to 61 students worldwide.</li>
+        <li>4.6/5 average student rating, 100% response rate within 24 hours and 0% lesson cancellation rate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HONORS -->
+  <section id="honors">
+    <h2>Honors and Certifications</h2>
+    <div class="teaching-item"><span><strong>Research Impact Team Award</strong>: Dense Fusion (NUST SINES spin-off), selected from 20+ teams · 2025</span></div>
+    <div class="teaching-item"><span><strong>AWS Certified Cloud Practitioner</strong></span></div>
   </section>
 
   <!-- SKILLS -->
@@ -717,30 +781,25 @@ monthly revenue recovery.</li>
     <div class="skills-grid">
       <div class="skill-group">
         <h4>Languages</h4>
-        <p>Python, C++, Bash</p>
+        <p>Python, Bash, SQL</p>
       </div>
       <div class="skill-group">
-        <h4>Machine Learning</h4>
-        <p>PyTorch, TensorFlow, Hugging Face, Scikit-learn, LangChain</p>
+        <h4>ML and Data</h4>
+        <p>PyTorch, TensorFlow, Hugging Face Transformers, RAG, OpenAI API</p>
       </div>
       <div class="skill-group">
-        <h4>Tools & Platforms</h4>
-        <p>Docker, Git, AWS, Linux, Jupyter, N8n</p>
+        <h4>Medical Imaging</h4>
+        <p>Multi-parametric MRI, NIfTI, nnU-Net, 3D Slicer</p>
       </div>
       <div class="skill-group">
-        <h4>Other</h4>
-        <p>Data Science, NLP, Computer Vision, RAG systems</p>
+        <h4>Research Methods</h4>
+        <p>Medical image segmentation, FEA/CFD simulation, PINNs, ablation studies, significance testing</p>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <p>Docker, Flask, Firebase/Firestore, Git</p>
       </div>
     </div>
-  </section>
-
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      AI Systems Engineer and Researcher focused on developing and deploying AI solutions in real-world applications. My research interests include applying machine learning, natural language processing, and computer vision techniques in HealthCare Systems.
-    </p>
   </section>
 
   <!-- CONTACT -->
@@ -748,7 +807,14 @@ monthly revenue recovery.</li>
     <h2>Contact</h2>
     <div class="contact-links">
       <a href="mailto:tahmed4411@gmail.com">Email: tahmed4411@gmail.com</a>
-      <a href="https://github.com/tahaahmad4411" target="_blank">GitHub — tahaahmad4411</a>
-      <a href="https://www.linkedin.com/in/tahmed4411" target="_blank">LinkedIn</a>
-      <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank">Preply Tutoring Profile</a>
-   
+      <a href="https://github.com/TahaAhmad4411" target="_blank" rel="noopener">GitHub: TahaAhmad4411</a>
+      <a href="https://www.linkedin.com/in/tahmed4411" target="_blank" rel="noopener">LinkedIn: tahmed4411</a>
+      <a href="https://preply.in/TAHA6EN2355085710?ts=17717202" target="_blank" rel="noopener">Preply tutoring profile</a>
+      <a href="/files/Taha_Ahmad_Mirza_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
+    <p class="caption">References are available on request and are listed in the PDF CV.</p>
+  </section>
+
+</main>
+</body>
+</html>

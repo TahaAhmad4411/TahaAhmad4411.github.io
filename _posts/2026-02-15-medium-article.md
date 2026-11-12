@@ -1,7 +1,7 @@
 ---
 title: 'How Maths humbled me in learning AI'
 date: 2026-02-15
-permalink: /posts/2025/02/medium-article/
+permalink: /posts/2026/02/maths-humbled-me/
 redirect_to: https://medium.com/p/b109860beeb7
 tags:
   - medium
